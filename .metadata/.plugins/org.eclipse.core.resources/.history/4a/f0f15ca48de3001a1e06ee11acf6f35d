@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.spring.coupon.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * @author ssadanala
+ *
+ */
+public interface CouponRepo extends JpaRepository<T, ID> {
+
+}

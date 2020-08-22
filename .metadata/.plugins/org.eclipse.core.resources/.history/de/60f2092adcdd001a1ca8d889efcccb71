@@ -1,0 +1,13 @@
+package com.spring.mq.config;
+
+import org.springframework.amqp.rabbit.annotation.Queue;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ConfigRabbitMQ {
+	
+	Queue getQueue() {
+		return new Queue("Queue1", false);
+	}
+
+}

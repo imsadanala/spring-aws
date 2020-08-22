@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.springcould.product.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author ssadanala
+ *
+ */
+@RestController
+public class ProductController {
+
+}

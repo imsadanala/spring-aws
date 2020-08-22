@@ -1,0 +1,5 @@
+package com.springcould.product.repos;
+
+public interface ProductRepo {
+
+}

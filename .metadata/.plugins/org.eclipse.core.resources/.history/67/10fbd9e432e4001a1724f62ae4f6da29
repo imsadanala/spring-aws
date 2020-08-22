@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.springcould.product.entity;
+
+/**
+ * @author ssadanala
+ *
+ */
+public class Product {
+
+}

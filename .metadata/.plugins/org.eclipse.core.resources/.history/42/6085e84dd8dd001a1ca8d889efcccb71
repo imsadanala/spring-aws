@@ -1,0 +1,10 @@
+package com.spring.mq.consumer;
+
+/**
+ * 
+ * @author Sueresh Sadanala
+ *
+ */
+public class RecieveMessageHandler {
+
+}

@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.springcould.product.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springcould.product.entity.Product;
+import com.springcould.product.repos.ProductRepo;
+
+/**
+ * @author ssadanala
+ *
+ */
+@RestController
+@RequestMapping("/productapi")
+public class ProductController {
+	
+	@Autowired
+	private ProductRepo productRepo;
+	
+	@PostMapping(value="/products")
+	public Product createProduct(@RequestBody Product product) {
+		return productRepo.save(product);
+	}
+}

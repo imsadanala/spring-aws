@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.spring.coupon.data;
+
+/**
+ * @author ssadanala
+ *
+ */
+public class Coupon {
+
+}

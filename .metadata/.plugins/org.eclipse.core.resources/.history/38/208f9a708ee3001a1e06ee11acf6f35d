@@ -1,0 +1,27 @@
+/**
+
+ * 
+ */
+package com.springcould.coupon.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springcould.coupon.entity.Coupon;
+
+/**
+ * @author Suresh Sadanala
+ *
+ */
+
+@RestController
+@RequestMapping("/couponapi")
+public class CouponController {
+
+	@PostMapping(value = "/coupons")
+	public Coupon create(Coupon coupon) {
+		return coupon;
+	}
+
+}

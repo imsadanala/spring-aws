@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.spring.coupon.data;
+
+import java.io.Serializable;
+
+/**
+ * @author ssadanala
+ *
+ */
+public class Coupon implements Serializable{
+
+}

@@ -1,0 +1,5 @@
+package com.spring.mq.consumer;
+
+public class RecieveMessageHandler {
+
+}

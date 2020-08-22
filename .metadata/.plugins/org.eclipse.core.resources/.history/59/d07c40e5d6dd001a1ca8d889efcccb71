@@ -1,0 +1,5 @@
+package com.spring.mq.config.swagger;
+
+public class ConfigSwagger {
+
+}
