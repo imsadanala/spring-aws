@@ -1,5 +1,0 @@
-package com.spring.mq.config;
-
-public class ConfigRabbitMQ {
-
-}
