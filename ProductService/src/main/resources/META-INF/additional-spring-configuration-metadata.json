@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "coupon.service.url",
+  "type": "java.lang.String",
+  "description": "A description for 'coupon.service.url'"
+}]}
