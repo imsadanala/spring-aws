@@ -1,19 +1,26 @@
 /**
  * 
  */
-package com.springcould.product.entity;
+package com.springcould.product.dto;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * @author Suresh Sadanala
  *
  */
-public class Coupon implements Serializable{
+@Entity
+public class Coupon {
 
 	private static final long serialVersionUID = 3313179101618816943L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String code;
 	private BigDecimal discount;

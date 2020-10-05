@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import com.springcould.product.entity.Coupon;
 import com.springcould.product.entity.Product;
 import com.springcould.product.repos.ProductRepo;
+import com.springcould.product.restclients.CouponClient;
 
 /**
  * @author ssadanala
@@ -31,10 +32,20 @@ public class ProductController {
 
 	@Value(value = "${coupon.service.url}")
 	private String couponServiceUrl;
+	
+	@Autowired
+	private CouponClient couponClient;
 
 	@PostMapping(value = "/products")
 	public Product createProduct(@RequestBody Product product) {
-		Coupon coupon = restTemplate.getForObject(couponServiceUrl + product.getCouponCode(), Coupon.class);
+		/**
+		 *Using RestTemplate  
+		 */
+		//Coupon coupon = restTemplate.getForObject(couponServiceUrl + product.getCouponCode(), Coupon.class);
+		/**
+		 * Using FeignClient
+		 */
+		com.springcould.product.dto.Coupon coupon = couponClient.getCoupon(product.getCouponCode());
 		product.setPrice(product.getPrice().subtract(coupon.getDiscount()));
 		return productRepo.save(product);
 	}
