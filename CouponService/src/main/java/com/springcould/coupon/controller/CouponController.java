@@ -34,6 +34,7 @@ public class CouponController {
 	
 	@GetMapping(value = "/coupon/{code}")
 	public Coupon getCoupon(@PathVariable("code") String code) {
+		System.out.println("server2");
 		return couponRepo.findByCode(code);
 	}
 
