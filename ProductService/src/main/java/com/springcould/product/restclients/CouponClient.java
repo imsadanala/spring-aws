@@ -14,9 +14,9 @@ import com.springcould.product.dto.Coupon;
  * @author Suresh Sadanala
  *
  */
-@FeignClient("COUPON-SERVICE")
-@RibbonClient("COUPON-SERVICE")
+@FeignClient("ZUULAPI-GATEWAY")
+//@RibbonClient("COUPON-SERVICE")
 public interface CouponClient {
-	@GetMapping("/couponapi/coupon/{code}")
+	@GetMapping("coupon-service/couponapi/coupon/{code}")
 	Coupon getCoupon(@PathVariable("code") String code);
 }
